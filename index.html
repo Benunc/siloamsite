@@ -65,7 +65,7 @@
 
     .container {
       max-width: 1100px;
-      margin: 0 auto;
+      margin: 1rem auto;
       padding: 0 1.5rem;
     }
 
@@ -346,6 +346,115 @@
       color: rgba(255,255,255,0.7);
     }
 
+    /* Email / FAQ section — collapsed by default */
+    .email-faq-section {
+      padding: 2rem 0 3rem;
+    }
+
+    .email-faq-section .section-title {
+      margin-bottom: 0.25rem;
+    }
+
+    .faq-list {
+      list-style: none;
+      margin: 2rem 0 0;
+      padding: 0;
+      max-width: 720px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-list li {
+      margin-bottom: 0.5rem;
+      border: 1px solid var(--wp-border);
+      border-radius: 6px;
+      overflow: hidden;
+      background: var(--wp-white);
+    }
+
+    .faq-list summary {
+      padding: 1rem 1.25rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--wp-text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: '+';
+      font-size: 1.25rem;
+      color: var(--wp-accent-blue);
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    .faq-list details[open] summary::after {
+      content: '−';
+    }
+
+    .faq-list .faq-content {
+      padding: 0 1.25rem 1.25rem;
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--wp-text-muted);
+      text-align: left;
+    }
+
+    .faq-list .faq-content p {
+      text-align: left;
+      margin: 0 0 0.75rem;
+    }
+
+    .faq-list .faq-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .faq-list .faq-content ul, .faq-list .faq-content ol {
+      margin: 0.5rem 0 1rem;
+      padding-left: 1.25rem;
+    }
+
+    .faq-list .faq-content li {
+      margin-bottom: 0.25rem;
+      border: none;
+      border-radius: 0;
+      background: none;
+    }
+
+    .faq-list .faq-content strong {
+      color: var(--wp-text);
+    }
+
+    .faq-list .faq-content a {
+      color: var(--wp-accent-blue);
+      text-decoration: none;
+    }
+
+    .faq-list .faq-content a:hover {
+      text-decoration: underline;
+    }
+
+    .faq-list .option-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--wp-dark-blue);
+      background: rgba(42, 75, 143, 0.1);
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      margin-left: 0.5rem;
+    }
+
     @media (min-width: 768px) {
       .pricing-grid {
         grid-template-columns: repeat(3, 1fr);
@@ -365,8 +474,6 @@
     </div>
   </header>
 
-  <span class="divider">////////////////////////////////////</span>
-
   <main>
     <section class="intro container">
       <h2 class="section-title">Where you are — and where we can take you</h2>
@@ -382,8 +489,6 @@
 
       <p>Below are three ways we can get there. The middle option is the one I’d recommend.</p>
     </section>
-
-    <div class="divider">////////////////////////////////////</div>
 
     <section class="container">
       <h2 class="section-title">How hosting works</h2>
@@ -514,6 +619,92 @@
       </div>
     </section>
 
+    <section class="email-faq-section container">
+      <h2 class="section-title">Email hosting</h2>
+      <p class="section-tagline">OPTIONAL. <span class="accent">MORE INFO NEEDED TO QUOTE.</span></p>
+      <span class="divider">////////////////////////////////////</span>
+      <p style="max-width: 640px;">You mentioned email with iPower. Below is how it all fits together, what I’d need from you to give a real recommendation, and two options (leave it as-is vs. move to Google Workspace) based on hypotheticals until we have those details.</p>
+
+      <ul class="faq-list">
+        <li>
+          <details>
+            <summary>My recommendation: Google Workspace for Nonprofits <span class="option-tag">LIKELY $0–LOW COST</span></summary>
+            <div class="faq-content">
+              <p>If you’re open to moving off iPower, I recommend switching to <strong>Google Workspace for Nonprofits</strong>. Churches like Siloam almost always qualify. Google offers eligible nonprofits <a href="https://www.google.com/nonprofits/workspace/compare/" target="_blank" rel="noopener">discounted or free Workspace</a>: the standard nonprofit tier is <strong>$0/user/month</strong>, and paid tiers (more storage, advanced features) are heavily discounted (e.g. around $3.50–$7.40/user/month instead of standard pricing).</p>
+              <p><strong>Your part:</strong> You’d apply and get approved through Google for Nonprofits. That’s something the church has to do—Google verifies your nonprofit status. Once you’re approved, you can enroll in Workspace for Nonprofits and choose the plan that fits.</p>
+              <p><strong>My part:</strong> I handle the technical switchover: MX records so mail for @siloam96.org goes to Google, setting up the accounts (or walking you through it), and optionally migrating existing mail and calendar from iPower so nothing gets left behind. You get approval; I do the cutover.</p>
+              <p>So the ongoing cost from Google can be zero or very low, and you’d pay me a one-time fee for the migration and setup. Details and a firm quote once I have the info in “What do I need from you?” below.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>What does “iPower” mean for your email?</summary>
+            <div class="faq-content">
+              <p>iPower is a web and email hosting company. When someone says they have “iPower for email,” they usually mean one of these:</p>
+              <ul>
+                <li><strong>Email that comes with an iPower hosting plan</strong> — The church may have (or have had) a website or other services with iPower, and email was included (typically RoundCube webmail, or POP/IMAP mailboxes).</li>
+                <li><strong>Standalone email hosting with iPower</strong> — Email-only service; the domain might still be at iPower or somewhere else.</li>
+              </ul>
+              <p>So “iPower” tells us <em>who</em> is handling the mail right now, but not yet <em>how many people</em> use it or <em>what else</em> (if anything) the church uses iPower for—domain, old website, etc. Those details determine how simple or involved a change would be.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>How does email “fit together” with the website and the domain?</summary>
+            <div class="faq-content">
+              <p>Email at a domain like <strong>@siloam96.org</strong> involves a few separate pieces:</p>
+              <ul>
+                <li><strong>Domain registration</strong> — Where the name “siloam96.org” is registered (could be iPower, GoDaddy, Google Domains, etc.). That doesn’t have to change when you change email.</li>
+                <li><strong>MX records</strong> — DNS settings that say “send mail for @siloam96.org to this provider.” Right now they almost certainly point to iPower. If you move to Google Workspace, we’d point them to Google instead.</li>
+                <li><strong>Mailboxes (users)</strong> — Each address (e.g. pastor@siloam96.org, office@siloam96.org) is a mailbox. Someone logs in to send and receive. That’s what we’d recreate in Google if you switch.</li>
+              </ul>
+              <p>The website (whether it’s on Squarespace today or WordPress with me later) is separate from where email is hosted. Changing the website doesn’t force an email change, and changing email doesn’t force a website change—but we can do both in a coordinated way if you want.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>What do I need from you to give an informed recommendation and quote?</summary>
+            <div class="faq-content">
+              <p>To recommend “leave it” vs. “move to Google” and to quote a one-time migration (if we go Google), I need:</p>
+              <ul>
+                <li><strong>How many users (mailboxes)?</strong> — e.g. 3 people each with their own @siloam96.org address, or one shared address like info@siloam96.org that several people use.</li>
+                <li><strong>What you use iPower for besides email</strong> — Just email? Or also the domain, an old church website, anything else? That tells us what (if anything) stays with iPower after a move.</li>
+                <li><strong>Any deliverability or reliability issues?</strong> — Mail going to spam, outages, or “we’ve had problems” helps justify moving. If everything’s fine, “leave it” might be enough for now.</li>
+                <li><strong>List of current addresses</strong> (if we move) — So we know exactly which accounts to create in Google and, if you want, to migrate mail for.</li>
+              </ul>
+              <p>With that, I can say: “Option A makes sense because…” or “Option B is worth it because…” and give you a real one-time migration price for Google.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Option 1: Leave email with iPower <span class="option-tag">NO COST</span></summary>
+            <div class="faq-content">
+              <p><strong>What it means:</strong> No change. You keep using iPower for @siloam96.org email exactly as you do now. The new website (with me) doesn’t touch email; we don’t move or reconfigure anything.</p>
+              <p><strong>When it makes sense:</strong> If you have only a few users, no real deliverability problems, and email isn’t a priority right now. Especially if the main goal is “better website”; we can always revisit email later.</p>
+              <p><strong>Pros:</strong> No one-time cost, no learning curve, no migration. You keep whatever you’re already paying iPower (if anything) and nothing else.</p>
+              <p><strong>Cons:</strong> You stay in iPower’s ecosystem. If their webmail or support has been a pain, or if you want Gmail/Calendar/Docs at the church domain, you won’t get that without a move.</p>
+            </div>
+          </details>
+        </li>
+        <li>
+          <details>
+            <summary>Option 2: Move email to Google Workspace <span class="option-tag">ONE-TIME MIGRATION + GOOGLE (OFTEN $0)</span></summary>
+            <div class="faq-content">
+              <p><strong>What it means:</strong> I help you set up Google Workspace for @siloam96.org. We create one account per user (based on the list you provide), point your domain’s MX records to Google, and optionally migrate existing mail and calendar from iPower into Google. After that, you use Gmail (and Google Calendar, Drive, etc.) at your church address. I charge a <strong>one-time</strong> fee for the migration and switchover.</p>
+              <p><strong>Why I recommend the nonprofit track:</strong> Through <a href="https://www.google.com/nonprofits/workspace/compare/" target="_blank" rel="noopener">Google Workspace for Nonprofits</a>, eligible organizations get the standard tier at <strong>$0/user/month</strong>, or deeply discounted paid tiers (e.g. $3.50–$7.40/user/month) if you need more features. Siloam would likely qualify. You’d need to get approved by Google for Nonprofits; I handle all the technical side—MX records and the actual switchover.</p>
+              <p><strong>When it makes sense:</strong> If you want better deliverability, a single place for email + calendar + docs, or a more reliable experience than iPower. With the nonprofit program, ongoing cost from Google can be zero or very low.</p>
+              <p><strong>What I need to quote the one-time migration:</strong> Number of users (mailboxes), whether you want existing mail/calendar migrated or a “fresh start,” and where your domain is registered. Hypothetical ballpark: a small number of users (e.g. 2–5) with a straightforward migration would be around $200 one time. More users or “migrate everything” would push it up. I’ll give a firm number once I have the details from the “What do I need from you?” section above.</p>
+              <p><strong>Ongoing cost (Google, not me):</strong> With Google for Nonprofits, often <strong>$0</strong> for the standard tier, or the discounted rates above if you choose a paid tier. You pay Google directly; that’s separate from my one-time migration fee and from my website hosting.</p>
+            </div>
+          </details>
+        </li>
+      </ul>
+    </section>
+
     <section class="next-steps">
       <div class="container">
         <h2 class="section-title">Next steps</h2>
@@ -525,6 +716,7 @@
               <li><strong>Sermon migration (Option 3 only):</strong> Roughly how many sermons are on the current site, and are they uploaded into Squarespace or linked from elsewhere?</li>
             </ul>
           </li>
+          <li><strong>Make a decision about email.</strong> Leave it with iPower or move to Google Workspace for Nonprofits (see the “Email hosting” section above). If you’re interested in moving to Google, send me the details listed there (number of users, what you use iPower for, current addresses) and I’ll give you a firm one-time migration quote.</li>
           <li><strong>Agreement and deposit.</strong> We’ll put the scope in writing and I’ll ask for a deposit to schedule the work. Timeline is flexible—no rush.</li>
         </ol>
         <p class="closing">I’m not trying to sell you more than you need. I am trying to give you a site that serves as the front door you described—and, in the Growth and Complete options, a single place where your best content (sermons and devotionals) can work for Siloam for a long time. If you’d like to talk through any of this on a short call, I’m happy to do that.</p>
